@@ -1,0 +1,42 @@
+[project]
+name = "revolut"
+dynamic = ["version"]
+description = "Integrates Revolut Merchant API to you pretix installation"
+readme = "README.rst"
+license = {text = "Apache"}
+keywords = ["pretix"]
+authors = [
+    {name = "kravco", email = "115938+kravco@users.noreply.github.com"},
+]
+maintainers = [
+    {name = "kravco", email = "115938+kravco@users.noreply.github.com"},
+]
+
+dependencies = [
+]
+
+[project.entry-points."pretix.plugin"]
+revolut = "revolut:PretixPluginMeta"
+
+[project.entry-points."distutils.commands"]
+build = "pretix_plugin_build.build:CustomBuild"
+
+[build-system]
+requires = [
+    "setuptools",
+    "pretix-plugin-build",
+]
+
+[project.urls]
+homepage = "https://github.com/kravco/pretix-plugin-revolut"
+repository = "https://github.com/kravco/pretix-plugin-revolut"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "revolut.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["revolut"]
+namespaces = false

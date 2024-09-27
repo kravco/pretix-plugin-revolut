@@ -1,0 +1,6 @@
+recursive-include revolut/static *
+recursive-include revolut/templates *
+recursive-include revolut/locale *
+recursive-include revolut *.py
+include LICENSE
+exclude .gitlab-ci.yml

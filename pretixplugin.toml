@@ -1,0 +1,5 @@
+[plugin]
+package = "revolut"
+modules = [ "revolut" ]
+marketplace_name = "revolut"
+
